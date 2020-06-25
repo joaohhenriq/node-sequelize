@@ -16,7 +16,7 @@ yarn sequelize db:create
 yarn sequelize migration:create --name=name-migration
 ```
 
-### Runs the migrations to create the tables
+### Runs the migrations
 ```bash
 yarn sequelize db:migrate
 ```
