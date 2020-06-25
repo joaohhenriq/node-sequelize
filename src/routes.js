@@ -2,6 +2,7 @@ const express = require("express")
 const UserController = require("./controllers/UserController")
 const AddressesController = require("./controllers/AddressesController")
 const TechController = require("./controllers/TechController")
+const ReportController = require('./controllers/ReportController')
 
 const routes = express.Router()
 
@@ -14,5 +15,7 @@ routes.post('/users/:user_id/addresses', AddressesController.create)
 routes.get('/users/:user_id/techs', TechController.find)
 routes.post('/users/:user_id/techs', TechController.create)
 routes.delete('/users/:user_id/techs', TechController.delete)
+
+routes.get('/report', ReportController.show)
 
 module.exports = routes
